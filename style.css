@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(161, 240, 233);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.searchbar {
+  position: relative;
+  height: 40px;
+  width: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: serif;
+  transition: 0.7s;
+}
+.searchbar:hover {
+  width: 400px;
+}
+.searchbar input {
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+  padding: 0px 0 0 20px;
+  font-size: 1.1 rem;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  background: linear-gradient(rgb(209, 236, 236), rgb(148, 243, 243));
+  box-shadow: 5px 5px 5px rgba(73, 70, 70, 0.1),
+    15px 15px 15px rgba(83, 79, 79, 0.1), inset 1px 1px 2px #ffffff;
+}
+.searchbar input::placeholder,
+.searchbar input {
+  color: transparent;
+}
+.searchbar:hover input::placeholder,
+.searchbar:hover input {
+  color: rgb(74, 77, 77);
+}
+.searchbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 9px;
+  height: 100%;
+  background: rgb(237, 245, 245);
+  z-index: 1;
+  filter: blur(0.6px);
+  border-radius: 0 0 0 5px;
+}
+.searchbar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 9px;
+  height: 100%;
+  background: rgb(194, 224, 224);
+  z-index: 1;
+  filter: blur(0.6px);
+  border-radius: 0 3px 0 0;
+}
+ion-icon {
+  position: absolute;
+  right: 20px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: rgb(74, 77, 77);
+}
